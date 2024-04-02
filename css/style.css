@@ -8,8 +8,6 @@ body {
 	font-size: 0;
 }
 
-
-
 /* 導覽列 header ---------------------------------------------------- */
 #header {
 	width: 100%;
@@ -18,9 +16,7 @@ body {
 	z-index: 1;
 	background: red;
 	text-align: center;
-	line-height: 56PX;
-
-
+	line-height: 56px;
 }
 
 #header .logo {
@@ -37,7 +33,7 @@ body {
 	height: 100%;
 }
 
-#header .logo>i {
+#header .logo > i {
 	font-size: 25px;
 	color: rgb(130, 130, 130);
 	margin: 0px 20px 0 0;
@@ -46,11 +42,17 @@ body {
 	transform: translate(0, 50%);
 }
 
+#header .box {
+	width: 50%;
+	height: 100%;
+	margin: auto;
+}
+
 #header .search {
-	width: 25%;
+	width: 70%;
 	height: 35px;
 	border: 1px solid rgb(180, 180, 180);
-	border-radius: 30px 0 0 30px;
+	border-radius: 30px;
 	background: white;
 	position: relative;
 	top: 50%;
@@ -58,21 +60,7 @@ body {
 	display: inline-block;
 }
 
-#header .search::after {
-	content: "";
-	width: 12%;
-	height: 35px;
-	border: 1px solid rgb(180, 180, 180);
-	border-radius: 0 30px 30px 0;
-	background: rgb(236, 236, 236);
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	display: inline-block;
-}
-
-#header .search>p {
+#header .search > p {
 	font-size: 18px;
 	color: rgb(167, 167, 167);
 	float: left;
@@ -83,13 +71,26 @@ body {
 	/* display: inline-block; */
 }
 
-#header .search>i {
-	font-size: 20px;
+#header .search::after {
+	content: '';
+	width: 50px;
+	height: 35px;
+	border: 1px solid rgb(180, 180, 180);
+	border-radius: 0 30px 30px 0;
+	background: rgb(236, 236, 236);
+	position: relative;
+	top: 50%;
+	float: right;
+	transform: translate(50%, -50%);
+}
+
+#header .search i {
+	font-size: 18px;
 	color: rgb(130, 130, 130);
 	position: relative;
-	top: -50%;
-	left: 50%;
-	transform: translate(50%, 30%);
+	transform: translate(0, 50%);
+	float: right;
+	padding-right: 30px;
 	z-index: 1;
 }
 
@@ -104,7 +105,7 @@ body {
 }
 
 #header .sign::after {
-	content: "";
+	content: '';
 	width: 80px;
 	height: 35px;
 	border: 1px solid rgb(180, 180, 180);
@@ -117,7 +118,7 @@ body {
 	z-index: 1;
 }
 
-#header .sign>i {
+#header .sign > i {
 	font-size: 25px;
 	color: rgb(70, 196, 255);
 	top: -5%;
@@ -127,7 +128,7 @@ body {
 	z-index: 2;
 }
 
-#header .sign>p {
+#header .sign > p {
 	font-size: 18px;
 	color: rgb();
 	float: left;
