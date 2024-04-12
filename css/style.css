@@ -40,7 +40,7 @@ body {
 	height: 40%;
 }
 
-#header .logo>i {
+#header .logo > i {
 	font-size: 20px;
 	color: rgb(130, 130, 130);
 	margin: 0px 20px 0 0;
@@ -62,7 +62,7 @@ body {
 	display: inline-block;
 }
 
-#header .search>p {
+#header .search > p {
 	font-size: 16px;
 	color: rgb(167, 167, 167);
 	line-height: 35px;
@@ -83,7 +83,7 @@ body {
 	z-index: 2;
 }
 
-#header .box1>i {
+#header .box1 > i {
 	font-size: 20px;
 	color: rgb(55, 55, 55);
 	position: relative;
@@ -105,7 +105,7 @@ body {
 	transform: translate(0%, -50%);
 }
 
-#header .search>i {
+#header .search > i {
 	font-size: 20px;
 	color: rgb(130, 130, 130);
 	margin-left: 10px;
@@ -140,7 +140,7 @@ body {
 	z-index: 1;
 }
 
-#header .sign>i {
+#header .sign > i {
 	font-size: 20px;
 	color: rgb(0, 140, 240);
 	margin-left: 20px;
@@ -153,7 +153,7 @@ body {
 	z-index: 2;
 }
 
-#header .sign>p {
+#header .sign > p {
 	font-size: 14px;
 	color: rgb(0, 140, 240);
 	float: left;
@@ -164,7 +164,7 @@ body {
 	z-index: 2;
 }
 
-#header .box2>i {
+#header .box2 > i {
 	font-size: 22px;
 	color: rgb(99, 99, 99);
 	float: left;
@@ -182,12 +182,9 @@ body {
 	position: fixed;
 	margin-top: 56px;
 	display: inline-block;
-	overflow-y: hidden;
+	/* overflow-y: hidden; */
+	overflow-y: scroll;
 	/* background: rgb(167, 252, 31); */
-}
-
-#sidebar:hover {
-	overflow-y: auto;
 }
 
 #sidebar::-webkit-scrollbar {
@@ -200,10 +197,10 @@ body {
 	background: #f1f1f1;
 } */
 
-/* 滾動滑桿 */
-#sidebar::-webkit-scrollbar-thumb {
-	/* border-radius: 10px; */
-	background: #999999;
+/* 滑桿 */
+#sidebar:hover::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #999;
 }
 
 /* 頂部▲按鈕 */
@@ -212,19 +209,73 @@ body {
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='50,00 0,50 100,50'/></svg>");
 } */
 
-
 #sidebar table {
-	width: 200px;
+	width: 180px;
 	font-size: 14px;
-	line-height: 40px;
-	margin-top: 15px;
-	margin: auto;
 	color: black;
+	margin: auto;
 	/* border-bottom: 1px solid rgb(130, 130, 130); */
 }
 
-#sidebar tr.line {
-	border-bottom: 1px solid rgb(211, 211, 211);
+#sidebar td {
+	vertical-align: middle;
+}
+
+#sidebar table.a {
+	height: 150%;
+	margin-top: 10px;
+}
+
+#sidebar table.b {
+	height: 15%;
+}
+
+/* #sidebar td:hover {
+	width: 180px;
+	height: 30px;
+	border-radius: 8px;
+	line-height: 30px;
+	margin: 20px;
+	background: rgb(236, 236, 236);
+} */
+
+#sidebar hr {
+	/* 以上code是為了移除<hr>默認設定 */
+	border: none;
+	border-bottom: 1px solid rgb(216, 216, 216);
+	width: 180px;
+}
+
+#sidebar .sp1 {
+	height: 110px;
+	line-height: 20px;
+}
+
+#sidebar td > .signbox {
+	width: 80px;
+	height: 30px;
+	border: 1px solid rgb(167, 167, 167);
+	border-radius: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 15px;
+	/* margin: auto; */
+}
+
+#sidebar .signbox i {
+	font-size: 20px;
+	padding-right: 3px;
+	color: rgb(0, 140, 240);
+}
+#sidebar .signbox p {
+	font-size: 14px;
+	display: inline-block;
+	color: rgb(0, 140, 240);
+}
+
+#sidebar td > i {
+	font-size: 18px;
+	margin-right: 15px;
 }
 
 #sidebar tr.T {
@@ -233,17 +284,12 @@ body {
 
 #sidebar tr.small {
 	font-size: 12px;
-	font-weight: 300;
-	color: #181818;
-	line-height: 40px;
+	font-weight: 400;
+	color: #535353;
 }
 
 #sidebar td.S {
 	line-height: 20px;
-}
-
-#sidebar td.S:nth-child(1) {
-	padding-top: 10px;
 }
 
 /* 標籤分類欄 tag ---------------------------------------------------- */
